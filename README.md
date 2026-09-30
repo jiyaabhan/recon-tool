@@ -2,6 +2,8 @@
 
 A Python tool that reconciles messy item records between two systems. It uses plain code for the easy matches, an LLM only for the ambiguous ones, and sends real conflicts to a human instead of fixing them automatically.
 
+**[See the demo](https://jiyaabhan.github.io/recon-tool/)**
+
 ## Why I built this
 
 This summer I worked as a Technology Consulting Intern on a NetSuite implementation for a furniture manufacturer. Part of the job was a data migration: auditing four client source systems, reconciling conflicting records, and rebuilding everything into validated import files. Most of that work was manual. The same item would appear under slightly different names or codes in different files, and the hardest part was not the obvious mismatches but the near-matches that looked right and weren't.
@@ -90,6 +92,8 @@ I designed the scenario and the planted problems based on my migration work, and
 
 ## How to run
 
+To view the demo page locally, run `python -m http.server` in the repo folder and open `localhost:8000`.
+
 Requires Python 3.10+.
 
 ```
@@ -97,7 +101,7 @@ python -m venv venv
 venv\Scripts\activate          # Windows (use source venv/bin/activate on Mac/Linux)
 python -m pip install -r requirements.txt
 
-python generate_data.py                            # create the synthetic data (seed is set at the top of the file)
+python generate_data.py                            # create the synthetic data (default seed 7; e.g. python generate_data.py 42)
 python reconcile.py --no-llm && python score.py --baseline   # baseline, no API key needed
 ```
 
@@ -117,6 +121,7 @@ The baseline runs without any API key. The saved results in `output/` show the A
 | `generate_data.py` | Creates the synthetic ERP data, the messy legacy copy, and the answer key |
 | `reconcile.py` | The three-stage matching pipeline plus conflict checks |
 | `score.py` | Scores the output against the answer key |
+| `index.html` | The demo page (GitHub Pages): results, the model's reasoning, and the review queue, read straight from the CSVs |
 | `data/`, `output/` | Held-out run (seed 7): input data, answer key, matches, review queue, and decision log |
 | `data_seed42/`, `output_seed42/` | The same files from the first run (seed 42) |
 | `DECISIONS.md` | Log of design changes and their effect |

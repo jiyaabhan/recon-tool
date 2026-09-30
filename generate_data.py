@@ -10,8 +10,12 @@ Creates, in ./data:
 import csv
 import os
 import random
+import sys
 
-random.seed(7)  # same data every run results are reproducible
+# same data every run, so results are reproducible. Pass a seed to get a new dataset:
+#   python generate_data.py 42
+SEED = int(sys.argv[1]) if len(sys.argv) > 1 else 7
+random.seed(SEED)
 
 OUT = "data"
 os.makedirs(OUT, exist_ok=True)

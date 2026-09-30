@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item master reconciliation · Jiya Bhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f1e6;
+    --paper-2: #ece6d6;
+    --ink: #1c2230;
+    --ink-soft: #545b69;
+    --rule: #d6cdb7;
+    --pencil: #1f4e8c;
+    --exception: #b3261e;
+    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16181d;
+      --paper-2: #1f2229;
+      --ink: #e8e3d6;
+      --ink-soft: #a29d91;
+      --rule: #343843;
+      --pencil: #86aee6;
+      --exception: #ef8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0; color: var(--ink); background: var(--paper);
+    font-family: var(--serif); font-size: 19px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+  a { color: var(--pencil); text-underline-offset: 3px; }
+
+  /* working-paper header */
+  .wp {
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono); font-size: 13px; color: var(--ink-soft);
+  }
+  .wp .wrap { display: flex; flex-wrap: wrap; gap: 6px 28px; padding-top: 14px; padding-bottom: 14px; }
+  .wp .wrap span:last-child { margin-left: auto; }
+
+  header.intro { padding: 72px 0 40px; }
+  h1 {
+    font-weight: 400; font-size: clamp(34px, 5.2vw, 56px); line-height: 1.08;
+    letter-spacing: -0.015em; margin: 0 0 24px; max-width: 21ch;
+  }
+  .lede { max-width: 62ch; color: var(--ink-soft); margin: 0; }
+
+  /* the tie-out exhibit */
+  .tieout {
+    display: grid; grid-template-columns: 1fr 64px 1fr; align-items: stretch;
+    margin: 44px 0 10px;
+  }
+  .card {
+    background: var(--paper-2); border: 1px solid var(--rule); padding: 18px 20px 20px;
+  }
+  .card .src { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); margin-bottom: 10px; }
+  .card .code { font-family: var(--mono); font-size: 15px; }
+  .card .name { font-family: var(--mono); font-size: 22px; line-height: 1.3; margin-top: 2px; }
+  .card.legacy { transform: rotate(-0.4deg); }
+  .link { position: relative; }
+  .link::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 50%;
+    border-top: 1.5px dashed var(--pencil);
+  }
+  .link .tick {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -54%);
+    background: var(--paper); color: var(--pencil); font-size: 26px; padding: 0 4px; line-height: 1;
+  }
+  .note {
+    font-style: italic; color: var(--pencil); max-width: 64ch; margin: 18px 0 0 2px;
+  }
+  .note .conf { font-style: normal; font-family: var(--mono); font-size: 13px; color: var(--ink-soft); }
+  .exhibit-controls { display: flex; gap: 14px; align-items: center; margin-top: 18px; }
+
+  button, .seg button {
+    font: 500 13.5px var(--mono); color: var(--ink); background: transparent;
+    border: 1px solid var(--rule); padding: 7px 12px; cursor: pointer;
+  }
+  button:hover { border-color: var(--ink-soft); }
+  .seg { display: inline-flex; }
+  .seg button + button { border-left: none; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  section { padding: 64px 0 8px; border-top: 1px solid var(--rule); margin-top: 56px; }
+  h2 { font-weight: 400; font-size: 30px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .section-intro { color: var(--ink-soft); max-width: 62ch; margin: 0 0 30px; }
+  .dataset { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 48px; }
+  .dataset p { margin: 0; font-size: 16px; color: var(--ink-soft); max-width: 52ch; }
+
+  /* reconciliation schedule */
+  table.schedule { width: 100%; border-collapse: collapse; font-size: 18px; }
+  .schedule th {
+    font: 500 13px var(--mono); color: var(--ink-soft); text-align: right;
+    padding: 0 0 10px 18px; border-bottom: 1px solid var(--ink);
+  }
+  .schedule th:first-child { text-align: left; padding-left: 0; }
+  .schedule td { padding: 11px 0 11px 18px; border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+  .schedule td:first-child { padding-left: 0; }
+  .schedule td.n { font-family: var(--mono); font-size: 17px; text-align: right; white-space: nowrap; width: 150px; }
+  .schedule td .sub { display: block; font-size: 15px; color: var(--ink-soft); }
+  .schedule tr.key td { border-bottom: 3px double var(--ink); }
+  .schedule .bad { color: var(--exception); }
+  .flow { font-family: var(--mono); font-size: 14.5px; color: var(--ink-soft); margin-top: 26px; line-height: 1.9; }
+  .flow b { color: var(--ink); font-weight: 500; }
+
+  /* the model's working */
+  .filters { margin-bottom: 18px; }
+  .entry {
+    display: grid; grid-template-columns: 28px minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 4px 20px; padding: 16px 0; border-bottom: 1px solid var(--rule);
+  }
+  .entry .mark { font-size: 20px; line-height: 1.2; color: var(--pencil); }
+  .entry .mark.x { color: var(--exception); }
+  .entry .pair { font-family: var(--mono); font-size: 14.5px; line-height: 1.6; }
+  .entry .pair .arrow { color: var(--ink-soft); }
+  .entry .why { font-size: 16.5px; line-height: 1.5; }
+  .entry .why .conf { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); display: block; margin-bottom: 2px; }
+  .entry .why .conf.medium { color: var(--pencil); }
+  .count { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); margin: 0 0 6px; }
+
+  /* open items */
+  .items { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .items h3 { font: 500 14px var(--mono); margin: 0 0 12px; color: var(--ink-soft); }
+  .items ol { margin: 0; padding-left: 22px; font-family: var(--mono); font-size: 14px; line-height: 1.75; }
+  .items li::marker { color: var(--ink-soft); }
+  .items .issue { color: var(--ink-soft); }
+
+  .limits { max-width: 66ch; }
+  .limits p { margin: 0 0 18px; }
+  .limits b { font-weight: 500; }
+
+  footer { margin-top: 72px; padding: 28px 0 60px; border-top: 1px solid var(--rule); font-size: 16px; color: var(--ink-soft); }
+  footer code { font-family: var(--mono); font-size: 14px; }
+  .error { font-family: var(--mono); color: var(--exception); font-size: 15px; }
+
+  @media (max-width: 760px) {
+    body { font-size: 17.5px; }
+    .wrap { padding: 0 20px; }
+    header.intro { padding-top: 48px; }
+    .tieout { grid-template-columns: 1fr; }
+    .link { height: 48px; }
+    .link::before { top: 0; bottom: 0; left: 50%; right: auto; border-top: none; border-left: 1.5px dashed var(--pencil); }
+    .card.legacy { transform: none; }
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry .why { grid-column: 2; }
+    .items { grid-template-columns: 1fr; gap: 28px; }
+    .schedule td.n { width: auto; }
+    .wp .wrap span:last-child { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wp">
+  <div class="wrap">
+    <span>W/P R-1</span>
+    <span>Item master reconciliation</span>
+    <span>Prepared by Jiya Bhan, Sept 2026</span>
+    <span><a href="https://github.com/jiyaabhan/recon-tool">Code and write-up on GitHub</a></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <header class="intro">
+    <h1>Two systems, one hundred items, and no agreement on what anything is called.</h1>
+    <p class="lede">
+      During a NetSuite migration this summer, I reconciled item records by hand across four client
+      systems. This is that job rebuilt as a pipeline, on synthetic data. Plain code matches the easy rows.
+      An LLM is asked only about the ones code can't settle, and has to give a reason. Anything it isn't
+      sure of, and every real conflict, goes to a person.
+    </p>
+
+    <div class="tieout" aria-live="polite">
+      <div class="card legacy">
+        <div class="src">Legacy spreadsheet</div>
+        <div class="code" id="ex-lcode">&nbsp;</div>
+        <div class="name" id="ex-lname">&nbsp;</div>
+      </div>
+      <div class="link" aria-hidden="true"><span class="tick">✓</span></div>
+      <div class="card">
+        <div class="src">ERP item master</div>
+        <div class="code" id="ex-acode">&nbsp;</div>
+        <div class="name" id="ex-aname">&nbsp;</div>
+      </div>
+    </div>
+    <p class="note" id="ex-note">&nbsp;</p>
+    <div class="exhibit-controls">
+      <button id="ex-next">Show another one the model matched</button>
+    </div>
+
+    <div class="dataset">
+      <div class="seg" role="group" aria-label="Dataset">
+        <button data-run="seed7" aria-pressed="true">Held-out data</button>
+        <button data-run="seed42" aria-pressed="false">Build data</button>
+      </div>
+      <p id="dataset-note"></p>
+    </div>
+  </header>
+
+  <section id="schedule">
+    <h2>The reconciliation</h2>
+    <p class="section-intro">
+      Scored against an answer key, since every problem in the legacy file was planted on purpose.
+      The row to read is confident wrong matches. An unmatched row gets looked at. A wrong match
+      goes into the new system and nobody notices until something downstream breaks.
+    </p>
+    <table class="schedule">
+      <thead><tr><th></th><th>Code only</th><th>Code + model</th></tr></thead>
+      <tbody id="schedule-body"></tbody>
+    </table>
+    <p class="flow" id="flow"></p>
+  </section>
+
+  <section id="working">
+    <h2>The model's working</h2>
+    <p class="section-intro">
+      Every row that reached the LLM, what it picked, and the reason it gave. Medium confidence came up
+      only when the name was the sole evidence and the legacy code offered no support, which is also when
+      a person should slow down.
+    </p>
+    <div class="filters seg" role="group" aria-label="Filter">
+      <button data-filter="all" aria-pressed="true">All</button>
+      <button data-filter="medium" aria-pressed="false">Medium confidence</button>
+      <button data-filter="none" aria-pressed="false">Declined to match</button>
+    </div>
+    <p class="count" id="working-count"></p>
+    <div id="working-list"></div>
+    <p><button id="working-more" hidden></button></p>
+  </section>
+
+  <section id="open-items">
+    <h2>Open items</h2>
+    <p class="section-intro">
+      What a person would actually have to check. Conflicts are listed, not fixed, because the tool can
+      tell that two systems disagree but can't know which one is right.
+    </p>
+    <div class="items">
+      <div><h3 id="items-model-h">Code + model</h3><ol id="items-model"></ol></div>
+      <div><h3 id="items-base-h">Code only</h3><ol id="items-base"></ol></div>
+    </div>
+  </section>
+
+  <section id="limits">
+    <h2>What this doesn't prove</h2>
+    <div class="limits">
+      <p><b>I designed the mess.</b> The abbreviations here (Blk, Std, Frm Stl, Pwdr) are the kind a language
+      model reads easily. Real legacy data has internal shorthand, typos, and fields that mean different
+      things in different systems.</p>
+      <p><b>The samples are small.</b> About 35 rows per dataset reached the model. A clean result on 35
+      decisions is encouraging, not conclusive.</p>
+      <p><b>Each dataset was run once.</b> Model output can vary between runs, so a production version would
+      need repeated runs to measure consistency.</p>
+      <p><b>The held-out set came from the same generator.</b> A new seed means new items and new placements,
+      but the same kinds of problems. It shows the thresholds weren't tuned to one dataset, not that the
+      tool handles every kind of mess.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    To run it yourself, clone <a href="https://github.com/jiyaabhan/recon-tool">the repo</a> and follow the
+    README. The code-only pipeline runs without an API key: <code>python generate_data.py 123</code>, then
+    <code>python reconcile.py --no-llm</code>.
+  </div>
+</footer>
+
+<script>
+const RUNS = {
+  seed7:  { data: "data/",        out: "output/",        note: "Generated after the tool was built, so the thresholds were never tuned on it. The fairer test." },
+  seed42: { data: "data_seed42/", out: "output_seed42/", note: "The dataset the tool was built and tuned against." },
+};
+const cache = {};
+let current = "seed7", exhibitIdx = 0, filter = "all", showAll = false;
+
+// CSV parser that handles quoted fields, doubled quotes, and CRLF line endings
+function parseCSV(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) {
+      if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+      else if (c === '"') q = false;
+      else field += c;
+    } else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(field); field = "";
+      if (row.length > 1 || row[0] !== "") rows.push(row);
+      row = [];
+    } else field += c;
+  }
+  if (field !== "" || row.length) { row.push(field); rows.push(row); }
+  const [head, ...body] = rows;
+  return body.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
+}
+
+async function csv(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Couldn't load ${path}`);
+  return parseCSV(await res.text());
+}
+
+async function load(runKey) {
+  if (cache[runKey]) return cache[runKey];
+  const { data, out } = RUNS[runKey];
+  const [a, b, key, m, mb, rev, revb, log] = await Promise.all([
+    csv(data + "source_a.csv"), csv(data + "source_b.csv"), csv(data + "answer_key.csv"),
+    csv(out + "matches.csv"), csv(out + "matches_baseline.csv"),
+    csv(out + "review_queue.csv"), csv(out + "review_queue_baseline.csv"),
+    csv(out + "decision_log.csv"),
+  ]);
+  const aBy = Object.fromEntries(a.map(r => [r.item_code, r]));
+  const truth = Object.fromEntries(key.map(r => [r.b_row, r.true_item_code]));
+  const score = rows => {
+    let correct = 0, wrong = 0, unmatched = 0;
+    for (const r of rows) {
+      const t = truth[r.b_row] || "", p = r.matched_item_code || "";
+      if (t === p) correct++;
+      if (p && t !== p) wrong++;
+      if (!p) unmatched++;
+    }
+    return { correct, wrong, unmatched, total: rows.length };
+  };
+  const mBy = Object.fromEntries(m.map(r => [r.b_row, r]));
+  const llm = log.filter(r => r.detail.startsWith("LLM said")).map(r => {
+    const g = r.detail.match(/^LLM said (\S+) \((\w+)\): ([\s\S]*)$/) || [];
+    const match = mBy[r.b_row];
+    const picked = g[1] && g[1].toLowerCase() !== "none" ? g[1] : "";
+    return {
+      b_row: r.b_row, lcode: match.b_code, lname: match.b_name,
+      picked, pickedName: picked && aBy[picked] ? aBy[picked].description : "",
+      accepted: match.matched_item_code || "", conf: g[2] || "", reason: g[3] || r.detail,
+      correct: (truth[r.b_row] || "") === (match.matched_item_code || ""),
+    };
+  });
+  const methods = {};
+  for (const r of m) methods[r.method] = (methods[r.method] || 0) + 1;
+  cache[runKey] = { ai: score(m), base: score(mb), rev, revb, llm, methods, rows: m.length };
+  return cache[runKey];
+}
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = s => Math.round(100 * s.correct / s.total) + "%";
+
+function exhibitPool(r) {
+  // lead with the most convincing kind of example: legacy code useless, name abbreviated, high confidence
+  const strong = r.llm.filter(e => e.correct && e.conf === "high" && e.picked && /^L\d/.test(e.lcode));
+  return strong.length ? strong : r.llm.filter(e => e.correct && e.picked);
+}
+
+function renderExhibit(r) {
+  const pool = exhibitPool(r);
+  if (!pool.length) return;
+  const e = pool[exhibitIdx % pool.length];
+  document.getElementById("ex-lcode").textContent = e.lcode;
+  document.getElementById("ex-lname").textContent = e.lname;
+  document.getElementById("ex-acode").textContent = e.picked;
+  document.getElementById("ex-aname").textContent = e.pickedName;
+  document.getElementById("ex-note").innerHTML =
+    `<span class="conf">Model, ${esc(e.conf)} confidence:</span> ${esc(e.reason)}`;
+}
+
+function renderSchedule(r) {
+  const row = (label, sub, b, a, cls = "", bad = false) => `
+    <tr class="${cls}"><td>${label}${sub ? `<span class="sub">${sub}</span>` : ""}</td>
+    <td class="n ${bad && b ? "bad" : ""}">${b}</td><td class="n ${bad && a ? "bad" : ""}">${a}</td></tr>`;
+  document.getElementById("schedule-body").innerHTML =
+    row("Legacy rows reconciled", "", r.base.total, r.ai.total) +
+    row("Matched correctly", "", `${r.base.correct} &nbsp;(${pct(r.base)})`, `${r.ai.correct} &nbsp;(${pct(r.ai)})`) +
+    row("Confident wrong matches", "The ones that would corrupt the new system", r.base.wrong, r.ai.wrong, "key", true) +
+    row("Left unmatched", "One legacy item doesn't exist in the ERP, so one is correct", r.base.unmatched, r.ai.unmatched) +
+    row("Open items for a person to check", "", r.revb.length, r.rev.length);
+  const n = k => r.methods[k] || 0;
+  document.getElementById("flow").innerHTML =
+    `Of ${r.rows} rows: <b>${n("exact_code")}</b> matched on code (checked against the name), ` +
+    `<b>${n("fuzzy_auto")}</b> on a confident name match, and <b>${r.llm.length}</b> went to the model. ` +
+    `It accepted <b>${n("llm_high")}</b> at high confidence and <b>${n("llm_medium")}</b> at medium, ` +
+    `and passed <b>${r.llm.length - n("llm_high") - n("llm_medium")}</b> to a person.`;
+}
+
+function renderWorking(r) {
+  let list = r.llm;
+  if (filter === "medium") list = list.filter(e => e.conf === "medium");
+  if (filter === "none") list = list.filter(e => !e.accepted);
+  const wrong = r.llm.filter(e => !e.correct).length;
+  const more = document.getElementById("working-more");
+  more.hidden = list.length <= 8;
+  more.textContent = showAll ? "Show fewer" : `Show all ${list.length}`;
+  const full = list;
+  if (!showAll) list = list.slice(0, 8);
+  document.getElementById("working-count").textContent =
+    `${full.length} in this view · ${r.llm.length - wrong} of ${r.llm.length} correct against the answer key`;
+  document.getElementById("working-list").innerHTML = list.map(e => `
+    <div class="entry">
+      <div class="mark ${e.correct ? "" : "x"}" title="${e.correct ? "Correct" : "Wrong"}">${e.correct ? "✓" : "✗"}</div>
+      <div class="pair">${esc(e.lcode)} &nbsp;${esc(e.lname)}<br>
+        <span class="arrow">→</span> ${e.picked ? `${esc(e.picked)} &nbsp;${esc(e.pickedName)}` : "no match"}</div>
+      <div class="why"><span class="conf ${esc(e.conf)}">${esc(e.conf)} confidence${e.accepted || !e.picked ? "" : ", sent to review"}</span>${esc(e.reason)}</div>
+    </div>`).join("") || `<p class="count">Nothing in this category for this dataset.</p>`;
+}
+
+function renderItems(r) {
+  const label = { cost_conflict: "cost conflict", work_center_conflict: "work centre conflict",
+                  duplicate: "duplicate", unmatched: "no match", missing_from_b: "missing from legacy" };
+  const li = rows => rows.map(x => `<li>${esc(x.detail)} <span class="issue">· ${label[x.issue] || esc(x.issue)}</span></li>`).join("");
+  document.getElementById("items-model-h").textContent = `Code + model, ${r.rev.length} items`;
+  document.getElementById("items-base-h").textContent = `Code only, ${r.revb.length} items`;
+  document.getElementById("items-model").innerHTML = li(r.rev);
+  document.getElementById("items-base").innerHTML = li(r.revb);
+}
+
+async function render() {
+  try {
+    const r = await load(current);
+    document.getElementById("dataset-note").textContent = RUNS[current].note;
+    renderExhibit(r); renderSchedule(r); renderWorking(r); renderItems(r);
+  } catch (err) {
+    document.getElementById("ex-note").innerHTML =
+      `<span class="error">${esc(err.message)}. If you opened this file directly, serve the folder instead (for example: python -m http.server).</span>`;
+  }
+}
+
+function wireSeg(selector, attr, onPick) {
+  document.querySelectorAll(selector + " button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(selector + " button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    onPick(b.dataset[attr]);
+  }));
+}
+wireSeg(".dataset .seg", "run", v => { current = v; exhibitIdx = 0; render(); });
+wireSeg(".filters", "filter", v => { filter = v; showAll = false; load(current).then(renderWorking); });
+document.getElementById("working-more").addEventListener("click", () => { showAll = !showAll; load(current).then(renderWorking); });
+document.getElementById("ex-next").addEventListener("click", () => { exhibitIdx++; load(current).then(renderExhibit); });
+render();
+</script>
+</body>
+</html>
