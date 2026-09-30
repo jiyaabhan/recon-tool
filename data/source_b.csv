@@ -1,0 +1,102 @@
+code,item_name,unit,std_cost,bottleneck_wc
+GLD-0011,Glide 25 mm,pack,1.08,Grinding
+SLAT-0011,Teak Slat Charcoal,pc,8.01,Assembly
+L2486,Steel Frame 25mm,pc,28.55,Welding
+L8002,Powder Coat 20mm,kg,17.97,Painting
+L6231,SS Screw Std,box,2.89,Assembly
+STL-0005,Steel Frame 12mm,pc,55.24,Welding
+L9247,Pwdr Coat Sm,kg,14.07,Painting
+SLAT-0001,Teak Slat Black,pc,4.69,Assembly
+SLAT-0010,Teak Slat Natural,pc,3.38,Assembly
+STL-0012,Steel Frame Large,pc,56.25,Grinding
+L4604,Mesh Panel 20 mm,pc,28.94,Assembly
+L9587,Alu Tube 25 mm,m,7.5,Cutting
+SLAT-0006,Teak Slat 32mm,pc,7.01,Assembly
+SLAT-0012,Teak Slat 12mm,pc,4.58,Assembly
+L5232,Slat Tk 25 mm,pc,7.94,Assembly
+SCR-0002,Stainless Screw Small,box,3.8,Assembly
+MESH-0099,Mesh Insert Temp,pc,9.5,Assembly
+L9201,SS Screw Sand,box,4.78,Assembly
+CUSH-0010,Outdoor Cushion Large,pc,31.37,Upholstery
+POW-0003,Powder Coat Natural,kg,8.56,Painting
+POW-0012,Powder Coat Charcoal,kg,8.44,Painting
+L7174,SS Screw Chrcl,box,4.18,Assembly
+CUSH-0008,Outdr Cush Sand,pc,29.37,Upholstery
+GLD-0002,Floor Glide 12mm,pack,1.12,Grinding
+CUSH-0005,Outdr Cush 25 mm,pc,25.5,Upholstery
+GLD-0013,Floor Glide Black,pack,2.02,Welding
+L9974,Stainless Screw 32mm,box,4.27,Assembly
+CUSH-0004,Outdr Cush 12 mm,pc,42.75,Upholstery
+AL-0013,Aluminium Tube Charcoal,m,4.63,Cutting
+L4999,Floor Glide Grey,pack,1.33,Grinding
+AL-0005,Aluminium Tube Standard,m,6.35,Cutting
+AL-0006,Aluminium Tube Black,m,7.39,Cutting
+POW-0001,Pwdr Coat Wht,kg,17.86,Painting
+L3287,Rope Mesh Panel Black,pc,17.91,Assembly
+MESH-0011,Mesh Panel 32 mm,pc,19.84,Assembly
+L9670,Stainless Screw 12mm,box,2.34,Assembly
+AL-0007,Aluminium Tube 20mm,m,3.35,Cutting
+L3648,Floor Glide Sand,pack,1.9,Grinding
+STL-0004,Steel Frame Standard,pc,36.97,Welding
+L2231,Mesh Panel 25 mm,pc,24.9,Assembly
+L5427,Frm Stl 32 mm,pc,25.14,Welding
+L2492,Aluminium Tube Small,m,8.07,Cutting
+L4538,Slat Tk Lg,pc,7.92,Assembly
+L2016,Rope Mesh Panel Standard,pc,17.45,Assembly
+STL-0009,Steel Frame Black,pc,25.5,Welding
+STL-0008,Steel Frame Grey,pc,59.76,Welding
+CUSH-0003,Outdoor Cushion Standard,pc,26.48,Upholstery
+L7763,Aluminium Tube Large,m,3.72,Cutting
+L9144,Glide 32 mm,pack,3.39,Grinding
+L3741,Teak Slat Sand,pc,4.78,Assembly
+MESH-0005,Mesh Panel Sm,pc,23.31,Assembly
+MESH-0010,Rope Mesh Panel White,pc,27.16,Assembly
+L6541,Steel Frame 20mm,pc,46.67,Welding
+L7272,Pwdr Coat Gry,kg,15.09,Painting
+L8916,Alu Tube Nat,m,6.78,Cutting
+L7461,Powder Coat 32mm,kg,15.03,Painting
+L3862,Rope Mesh Panel Sand,pc,27.05,Assembly
+L4152,Teak Slat White,pc,11.88,Assembly
+L8421,Mesh Panel Lg,pc,26.56,Assembly
+GLD-0012,Floor Glide Small,pack,1.98,Grinding
+CUSH-0004,Outdr Cush 12 mm,pc,42.75,Upholstery
+CUSH-0007,Outdoor Cushion 20mm,pc,28.84,Upholstery
+STL-0006,Steel Frame Natural,pc,48.05,Welding
+SCR-0011,Stainless Screw 25mm,box,3.83,Assembly
+L6453,SS Screw Lg,box,5.54,Assembly
+CUSH-0009,Outdoor Cushion Charcoal,pc,43.49,Upholstery
+SCR-0004,Stainless Screw Black,box,5.76,Assembly
+L3062,Pwdr Coat 25 mm,kg,16.51,Painting
+MESH-0009,Mesh Panel 12 mm,pc,17.99,Assembly
+CUSH-0002,Outdoor Cushion Black,pc,40.33,Grinding
+AL-0003,Aluminium Tube 32mm,m,3.88,Cutting
+SLAT-0009,Teak Slat Small,pc,8.84,Assembly
+AL-0012,Alu Tube 12 mm,m,5.65,Cutting
+GLD-0009,Floor Glide Standard,pack,2.97,Grinding
+L5546,Pwdr Coat Lg,kg,9.06,Painting
+AL-0004,Aluminium Tube White,m,4.86,Cutting
+GLD-0004,Glide Chrcl,pack,3.15,Grinding
+SLAT-0003,Teak Slat 20mm,pc,9.44,Assembly
+STL-0013,Steel Frame Sand,pc,33.89,Welding
+SCR-0012,SS Screw Nat,box,5.33,Assembly
+L4311,SS Screw 20 mm,box,5.23,Assembly
+L7781,Floor Glide Large,pack,3.81,Grinding
+AL-0008,Alu Tube Gry,m,3.61,Cutting
+STL-0001,Steel Frame Charcoal,pc,39.67,Welding
+SCR-0002,Stainless Screw Grey,box,3.58,Assembly
+SCR-0009,SS Screw Wht,box,5.2,Assembly
+POWDER-0008,Powder Coat Sand,kg,16.19,Painting
+L1329,Floor Glide Natural,pack,2.01,Grinding
+L4917,Teak Slat Standard,pc,5.92,Assembly
+L5928,Outdr Cush Wht,pc,24.5,Upholstery
+STL-0003,Steel Frame Small,pc,52.29,Welding
+AL-0001,Alu Tube Sand,m,6.5,Cutting
+L8372,Teak Slat Grey,pc,4.66,Assembly
+CUSH-0006,Outdoor Cushion Small,pc,49.61,Upholstery
+POW-0006,Pwdr Coat Blk,kg,17.48,Painting
+L9161,Powder Coat 12mm,kg,11.98,Painting
+POWDER-0005,Powder Coat Standard,kg,14.34,Painting
+L6602,Floor Glide 20mm,pack,2.45,Grinding
+MESH-0004,Mesh Panel Gry,pc,29.77,Assembly
+GLD-0005,Floor Glide White,pack,1.5,Grinding
+STL-0002,Steel Frame White,pc,45.36,Welding

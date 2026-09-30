@@ -1,0 +1,101 @@
+item_code,description,uom,cost,work_center
+SCR-0001,Stainless Screw Grey,box,3.58,Assembly
+POWDER-0001,Powder Coat White,kg,17.86,Painting
+AL-0001,Aluminium Tube Sand,m,6.5,Cutting
+SLAT-0001,Teak Slat Black,pc,4.69,Assembly
+CUSH-0001,Outdoor Cushion White,pc,24.5,Upholstery
+CUSH-0002,Outdoor Cushion Black,pc,40.33,Upholstery
+AL-0002,Aluminium Tube Natural,m,6.78,Cutting
+POWDER-0002,Powder Coat 32mm,kg,15.03,Painting
+POWDER-0003,Powder Coat Natural,kg,8.56,Painting
+STL-0001,Steel Frame Charcoal,pc,39.67,Welding
+AL-0003,Aluminium Tube 32mm,m,4.85,Cutting
+STL-0002,Steel Frame White,pc,45.36,Welding
+SLAT-0002,Teak Slat Sand,pc,4.78,Assembly
+SLAT-0003,Teak Slat 20mm,pc,9.44,Assembly
+CUSH-0003,Outdoor Cushion Standard,pc,26.48,Upholstery
+GLD-0001,Floor Glide Sand,pack,1.9,Grinding
+STL-0003,Steel Frame Small,pc,52.29,Welding
+MESH-0001,Rope Mesh Panel 25mm,pc,24.9,Assembly
+SCR-0002,Stainless Screw Small,box,3.8,Assembly
+AL-0004,Aluminium Tube White,m,6.07,Cutting
+STL-0004,Steel Frame Standard,pc,36.97,Welding
+GLD-0002,Floor Glide 12mm,pack,1.12,Grinding
+AL-0005,Aluminium Tube Standard,m,6.35,Cutting
+SCR-0003,Stainless Screw Sand,box,4.78,Assembly
+GLD-0003,Floor Glide 32mm,pack,3.39,Grinding
+MESH-0002,Rope Mesh Panel 20mm,pc,28.94,Assembly
+AL-0006,Aluminium Tube Black,m,7.39,Cutting
+MESH-0003,Rope Mesh Panel Large,pc,26.56,Assembly
+GLD-0004,Floor Glide Charcoal,pack,3.15,Grinding
+SCR-0004,Stainless Screw Black,box,5.76,Assembly
+AL-0007,Aluminium Tube 20mm,m,3.35,Cutting
+MESH-0004,Rope Mesh Panel Grey,pc,29.77,Assembly
+CUSH-0004,Outdoor Cushion 12mm,pc,42.75,Upholstery
+GLD-0005,Floor Glide White,pack,1.5,Grinding
+CUSH-0005,Outdoor Cushion 25mm,pc,25.5,Upholstery
+STL-0005,Steel Frame 12mm,pc,55.24,Welding
+MESH-0005,Rope Mesh Panel Small,pc,23.31,Assembly
+SCR-0005,Stainless Screw Large,box,5.54,Assembly
+SLAT-0004,Teak Slat Grey,pc,4.66,Assembly
+STL-0006,Steel Frame Natural,pc,48.05,Welding
+POWDER-0004,Powder Coat 20mm,kg,17.97,Painting
+MESH-0006,Rope Mesh Panel Black,pc,17.91,Assembly
+SCR-0006,Stainless Screw 32mm,box,4.27,Assembly
+SLAT-0005,Teak Slat White,pc,11.88,Assembly
+GLD-0006,Floor Glide Grey,pack,1.33,Grinding
+STL-0007,Steel Frame 25mm,pc,28.55,Welding
+SLAT-0006,Teak Slat 32mm,pc,7.01,Assembly
+MESH-0007,Rope Mesh Panel Sand,pc,27.05,Assembly
+GLD-0007,Floor Glide 20mm,pack,2.45,Grinding
+AL-0008,Aluminium Tube Grey,m,3.61,Cutting
+POWDER-0005,Powder Coat Standard,kg,14.34,Painting
+AL-0009,Aluminium Tube Small,m,8.07,Cutting
+SCR-0007,Stainless Screw Standard,box,2.89,Assembly
+SLAT-0007,Teak Slat Standard,pc,5.92,Assembly
+CUSH-0006,Outdoor Cushion Small,pc,39.69,Upholstery
+SLAT-0008,Teak Slat 25mm,pc,7.94,Assembly
+POWDER-0006,Powder Coat Black,kg,17.48,Painting
+SLAT-0009,Teak Slat Small,pc,8.84,Assembly
+SCR-0008,Stainless Screw 20mm,box,5.23,Assembly
+GLD-0008,Floor Glide Natural,pack,2.01,Grinding
+AL-0010,Aluminium Tube Large,m,3.72,Cutting
+SCR-0009,Stainless Screw White,box,5.2,Assembly
+CUSH-0007,Outdoor Cushion 20mm,pc,28.84,Upholstery
+STL-0008,Steel Frame Grey,pc,59.76,Welding
+POWDER-0007,Powder Coat Grey,kg,15.09,Painting
+GLD-0009,Floor Glide Standard,pack,2.97,Grinding
+GLD-0010,Floor Glide Large,pack,3.81,Grinding
+STL-0009,Steel Frame Black,pc,25.5,Welding
+AL-0011,Aluminium Tube 25mm,m,7.5,Cutting
+SLAT-0010,Teak Slat Natural,pc,4.22,Assembly
+SLAT-0011,Teak Slat Charcoal,pc,8.01,Assembly
+SCR-0010,Stainless Screw Charcoal,box,4.18,Assembly
+STL-0010,Steel Frame 32mm,pc,25.14,Welding
+STL-0011,Steel Frame 20mm,pc,46.67,Welding
+POWDER-0008,Powder Coat Sand,kg,16.19,Painting
+GLD-0011,Floor Glide 25mm,pack,1.08,Grinding
+AL-0012,Aluminium Tube 12mm,m,5.65,Cutting
+SLAT-0012,Teak Slat 12mm,pc,4.58,Assembly
+MESH-0008,Rope Mesh Panel Standard,pc,17.45,Assembly
+CUSH-0008,Outdoor Cushion Sand,pc,29.37,Upholstery
+SCR-0011,Stainless Screw 25mm,box,3.83,Assembly
+POWDER-0009,Powder Coat 12mm,kg,11.98,Painting
+AL-0013,Aluminium Tube Charcoal,m,4.63,Cutting
+MESH-0009,Rope Mesh Panel 12mm,pc,17.99,Assembly
+GLD-0012,Floor Glide Small,pack,1.98,Grinding
+POWDER-0010,Powder Coat Large,kg,9.06,Painting
+MESH-0010,Rope Mesh Panel White,pc,27.16,Assembly
+GLD-0013,Floor Glide Black,pack,2.02,Grinding
+CUSH-0009,Outdoor Cushion Charcoal,pc,34.79,Upholstery
+POWDER-0011,Powder Coat 25mm,kg,16.51,Painting
+POWDER-0012,Powder Coat Charcoal,kg,8.44,Painting
+POWDER-0013,Powder Coat Small,kg,14.07,Painting
+CUSH-0010,Outdoor Cushion Large,pc,31.37,Upholstery
+SCR-0012,Stainless Screw Natural,box,5.33,Assembly
+MESH-0011,Rope Mesh Panel 32mm,pc,19.84,Assembly
+SCR-0013,Stainless Screw 12mm,box,2.34,Assembly
+STL-0012,Steel Frame Large,pc,56.25,Welding
+STL-0013,Steel Frame Sand,pc,33.89,Welding
+SLAT-0013,Teak Slat Large,pc,7.92,Assembly
+CUSH-0011,Outdoor Cushion Natural,pc,42.75,Upholstery

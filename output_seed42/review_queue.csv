@@ -1,0 +1,13 @@
+b_row,issue,detail
+6,cost_conflict,CUSH-0012: A=43.62 vs B=54.52
+10,work_center_conflict,AL-0012: A=Cutting vs B=Grinding
+29,cost_conflict,SLAT-0010: A=5.06 vs B=6.32
+31,cost_conflict,STL-0004: A=48.09 vs B=60.11
+35,unmatched,"MESH-0099 / Mesh Insert Temp: no confident match, may not exist"
+48,cost_conflict,SCR-0001: A=2.37 vs B=1.9
+72,work_center_conflict,GLD-0005: A=Grinding vs B=Welding
+80,work_center_conflict,MESH-0007: A=Assembly vs B=Grinding
+88,cost_conflict,SCR-0008: A=2.82 vs B=3.52
+50,duplicate,MESH-0003 matched by more than one B row
+77,duplicate,MESH-0003 matched by more than one B row
+,missing_from_b,CUSH-0009 has no row in B

@@ -1,0 +1,102 @@
+b_row,b_code,b_name,matched_item_code,method
+1,CUSH-0008,Outdr Cush 20 mm,CUSH-0008,fuzzy_guess
+2,GLD-0002,Glide 25 mm,,needs_review
+3,CUSH-0011,Outdoor Cushion Standard,CUSH-0011,exact_code
+4,GLD-0010,Glide Blk,,needs_review
+5,L8438,Aluminium Tube 32mm,AL-0003,fuzzy_auto
+6,CUSH-0012,Outdoor Cushion White,CUSH-0012,exact_code
+7,L3330,Steel Frame 25mm,STL-0002,fuzzy_auto
+8,L1977,Outdr Cush Lg,CUSH-0003,fuzzy_guess
+9,L8708,Powder Coat Charcoal,POWDER-0010,fuzzy_auto
+10,AL-0012,Aluminium Tube Charcoal,AL-0012,exact_code
+11,L9847,Mesh Panel 20 mm,MESH-0008,fuzzy_guess
+12,SLAT-0003,Teak Slat Large,SLAT-0003,exact_code
+13,SLAT-0004,Teak Slat Black,SLAT-0004,exact_code
+14,STL-0003,Steel Frame 20mm,STL-0003,exact_code
+15,CUSH-0004,Outdoor Cushion Sand,CUSH-0004,exact_code
+16,AL-0010,Aluminium Tube Small,AL-0010,exact_code
+17,MESH-0013,Rope Mesh Panel Charcoal,MESH-0013,exact_code
+18,CUSH-0010,Outdr Cush 25 mm,CUSH-0010,fuzzy_guess
+19,AL-0002,Aluminium Tube Large,AL-0002,exact_code
+20,MESH-0009,Rope Mesh Panel 32mm,MESH-0009,exact_code
+21,SCR-0002,Stainless Screw 32mm,SCR-0002,exact_code
+22,SLAT-0012,Teak Slat Sand,SLAT-0012,exact_code
+23,L4750,Rope Mesh Panel Sand,MESH-0011,fuzzy_auto
+24,POWDER-0003,Powder Coat Small,POWDER-0003,exact_code
+25,SCR-0009,SS Screw 12 mm,SCR-0009,fuzzy_guess
+26,CUSH-0005,Outdr Cush 32 mm,CUSH-0005,fuzzy_guess
+27,STL-0009,Steel Frame Natural,STL-0009,exact_code
+28,MESH-0006,Rope Mesh Panel 25mm,MESH-0006,exact_code
+29,SLAT-0010,Teak Slat 25mm,SLAT-0010,exact_code
+30,L5982,Slat Tk Chrcl,SLAT-0009,fuzzy_guess
+31,STL-0004,Steel Frame Grey,STL-0004,exact_code
+32,POW-0011,Pwdr Coat Std,POWDER-0008,fuzzy_guess
+33,STL-0006,Steel Frame Black,STL-0006,exact_code
+34,STL-0010,Steel Frame Standard,STL-0010,exact_code
+35,MESH-0099,Mesh Insert Temp,,needs_review
+36,L9199,Glide Gry,GLD-0004,fuzzy_guess
+37,L7965,Mesh Panel Gry,MESH-0002,fuzzy_guess
+38,POWDER-0005,Powder Coat 32mm,POWDER-0005,exact_code
+39,L3718,Rope Mesh Panel Small,MESH-0004,fuzzy_auto
+40,L5460,Outdr Cush Sm,CUSH-0007,fuzzy_guess
+41,POWDER-0009,Powder Coat Grey,POWDER-0009,exact_code
+42,L4824,Powder Coat 25mm,POWDER-0002,fuzzy_auto
+43,L2169,SS Screw Nat,,needs_review
+44,SLAT-0008,Teak Slat White,SLAT-0008,exact_code
+45,L2496,Frm Stl 12 mm,,needs_review
+46,POWDER-0013,Powder Coat 20mm,POWDER-0013,exact_code
+47,CUSH-0002,Outdr Cush Chrcl,CUSH-0002,fuzzy_guess
+48,SCR-0001,Stainless Screw White,SCR-0001,exact_code
+49,L8679,SS Screw 20 mm,SCR-0006,fuzzy_guess
+50,MESH-0003,Mesh Panel Lg,MESH-0003,fuzzy_guess
+51,SLAT-0006,Teak Slat Grey,SLAT-0006,exact_code
+52,SLAT-0013,Slat Tk 20 mm,SLAT-0013,exact_code
+53,SLAT-0001,Teak Slat Natural,SLAT-0001,exact_code
+54,L4241,Mesh Panel Std,MESH-0011,fuzzy_guess
+55,L6039,Floor Glide White,GLD-0001,fuzzy_auto
+56,L8141,Glide Sm,,needs_review
+57,L6280,Frm Stl Lg,STL-0007,fuzzy_guess
+58,SLAT-0005,Teak Slat Small,SLAT-0005,exact_code
+59,AL-0006,Aluminium Tube Natural,AL-0006,exact_code
+60,STL-0001,Steel Frame Small,STL-0001,exact_code
+61,POW-0004,Pwdr Coat Lg,POWDER-0004,fuzzy_guess
+62,L3441,Teak Slat Standard,SLAT-0002,fuzzy_auto
+63,GLD-0011,Floor Glide Large,GLD-0011,exact_code
+64,L1423,Pwdr Coat Sand,POWDER-0008,fuzzy_auto
+65,L9090,Aluminium Tube 20mm,AL-0011,fuzzy_auto
+66,L9502,Floor Glide 20mm,GLD-0008,fuzzy_auto
+67,SLAT-0007,Slat Tk 32 mm,SLAT-0007,exact_code
+68,GLD-0007,Glide 32 mm,,needs_review
+69,SCR-0004,Stainless Screw Standard,SCR-0004,exact_code
+70,L5334,Outdoor Cushion Natural,CUSH-0001,fuzzy_auto
+71,GLD-0009,Floor Glide Standard,GLD-0009,exact_code
+72,GLD-0005,Floor Glide Charcoal,GLD-0005,exact_code
+73,MESH-0010,Rope Mesh Panel White,MESH-0010,exact_code
+74,AL-0002,Aluminium Tube Black,AL-0001,fuzzy_auto
+75,GLD-0006,Glide Sand,GLD-0006,fuzzy_guess
+76,SCR-0011,Stainless Screw 25mm,SCR-0011,exact_code
+77,MESH-0003,Mesh Panel Lg,MESH-0003,fuzzy_guess
+78,L8245,Floor Glide 12mm,GLD-0012,fuzzy_auto
+79,L5728,Alu Tube Gry,AL-0007,fuzzy_guess
+80,MESH-0007,Rope Mesh Panel Natural,MESH-0007,exact_code
+81,SCR-0012,Stainless Screw Sand,SCR-0012,exact_code
+82,L8172,Pwdr Coat 12 mm,POWDER-0006,fuzzy_guess
+83,L2166,Pwdr Coat Wht,POWDER-0001,fuzzy_guess
+84,L5102,Powder Coat Black,POWDER-0007,fuzzy_auto
+85,GLD-0003,Glide Nat,,needs_review
+86,L1659,Stainless Screw Large,SCR-0010,fuzzy_auto
+87,MESH-0005,Rope Mesh Panel 12mm,MESH-0005,exact_code
+88,SCR-0008,Stainless Screw Charcoal,SCR-0008,exact_code
+89,L3973,Pwdr Coat Nat,POWDER-0012,fuzzy_guess
+90,L5557,Outdoor Cushion Grey,CUSH-0013,fuzzy_auto
+91,L5352,SS Screw Gry,SCR-0003,fuzzy_guess
+92,L4683,Aluminium Tube 12mm,AL-0005,fuzzy_auto
+93,L3870,Steel Frame 32mm,STL-0011,fuzzy_auto
+94,AL-0008,Aluminium Tube White,AL-0008,exact_code
+95,AL-0009,Alu Tube Std,AL-0004,fuzzy_guess
+96,CUSH-0006,Outdoor Cushion 12mm,CUSH-0006,exact_code
+97,L3037,Frm Stl Chrcl,STL-0005,fuzzy_guess
+98,L2317,Stainless Screw Black,SCR-0007,fuzzy_auto
+99,L9922,Aluminium Tube Sand,AL-0004,fuzzy_auto
+100,L1653,Teak Slat 12mm,SLAT-0011,fuzzy_auto
+101,L1339,Rope Mesh Panel Black,MESH-0012,fuzzy_auto

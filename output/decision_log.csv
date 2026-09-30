@@ -1,0 +1,102 @@
+b_row,method,detail
+1,llm_high,"LLM said GLD-0011 (high): The code matches exactly, the name 'Glide 25 mm' corresponds to 'Floor Glide 25mm' (only the 'Floor' prefix and spacing differ), and the unit is the same (pack)."
+2,exact_code,name score 100
+3,fuzzy_auto,score 100 (runner-up 94)
+4,fuzzy_auto,score 100 (runner-up 94)
+5,llm_high,"LLM said SCR-0007 (high): 'SS Screw Std' maps to 'Stainless Screw Standard' (SS = stainless steel, Std = Standard) with the same unit, while the other candidates differ in size or color descriptors."
+6,exact_code,name score 100
+7,llm_high,"LLM said POWDER-0013 (high): ""Pwdr Coat Sm"" expands naturally to ""Powder Coat Small"" with the same unit (kg), while ""Sm"" doesn't fit Sand, Standard, White or 32mm (which would be abbreviated Snd, Std, Wht, 32mm)."
+8,exact_code,name score 100
+9,exact_code,name score 100
+10,exact_code,name score 100
+11,llm_medium,"LLM said MESH-0002 (medium): Candidate 1 is the only one with the same 20 mm size and unit (pc), and its name 'Rope Mesh Panel 20mm' fits the legacy 'Mesh Panel 20 mm' with a likely dropped 'Rope' qualifier, though the legacy record doesn't mention rope so a small chance remains that it's a different mesh type."
+12,llm_high,"LLM said AL-0011 (high): 'Alu Tube 25 mm' is an abbreviation of 'Aluminium Tube 25mm', with identical diameter and unit (m), while the other candidates differ in diameter or specification."
+13,exact_code,name score 100
+14,exact_code,name score 100
+15,llm_high,"LLM said SLAT-0008 (high): 'Slat Tk 25 mm' reads as 'Slat Teak 25 mm' (Tk = Teak), which matches 'Teak Slat 25mm' with the same 25mm thickness and unit (pc), while the other candidates differ in thickness or spec."
+16,exact_code,name score 100
+17,needs_review,"LLM said none (high): The legacy item 'Mesh Insert Temp' has no distinguishing attribute (size, color, dimension) that ties it to any specific Rope Mesh Panel candidate, and its code MESH-0099 matches none of them, so any pick would be a guess."
+18,llm_high,"LLM said SCR-0003 (high): 'SS Screw Sand' maps to 'Stainless Screw Sand' (SS = Stainless Steel/Stainless), with the same 'Sand' variant and the same unit (box), and no other candidate shares the 'Sand' descriptor."
+19,exact_code,name score 100
+20,fuzzy_auto,score 100 (runner-up 78)
+21,fuzzy_auto,score 100 (runner-up 76)
+22,llm_high,"LLM said SCR-0010 (high): 'SS Screw Chrcl' abbreviates 'Stainless Screw Charcoal' (SS = stainless, Chrcl = charcoal), and the unit (box) matches, while the other screw candidates differ in color and the steel frame differs in item type and unit."
+23,exact_code,name score 86
+24,exact_code,name score 100
+25,llm_high,"LLM said CUSH-0005 (high): The code matches exactly, the name 'Outdr Cush 25 mm' is an abbreviation of 'Outdoor Cushion 25mm', and the unit (pc) is the same."
+26,exact_code,name score 100
+27,fuzzy_auto,score 100 (runner-up 95)
+28,llm_high,"LLM said CUSH-0004 (high): The code matches exactly, and the name 'Outdr Cush 12 mm' is an abbreviation of 'Outdoor Cushion 12mm' with the same thickness and unit (pc)."
+29,exact_code,name score 100
+30,fuzzy_auto,score 100 (runner-up 85)
+31,exact_code,name score 100
+32,exact_code,name score 100
+33,llm_high,"LLM said POWDER-0001 (high): The legacy code POW-0001 is a shortened prefix of POWDER-0001 with the same numeric suffix, 'Pwdr Coat Wht' abbreviates 'Powder Coat White', and the unit (kg) matches."
+34,fuzzy_auto,score 100 (runner-up 86)
+35,llm_high,"LLM said MESH-0011 (high): The code matches exactly, the 32 mm size matches (only the spacing in '32mm' differs), the unit is the same, and 'Rope' is just the fuller name for the abbreviated legacy 'Mesh Panel'."
+36,fuzzy_auto,score 100 (runner-up 95)
+37,exact_code,name score 100
+38,fuzzy_auto,score 100 (runner-up 89)
+39,exact_code,name score 100
+40,llm_medium,"LLM said MESH-0001 (medium): It is the only candidate with a 25mm size and the same 'Mesh Panel' name and unit, but the legacy name omits 'Rope', so the material is not confirmed."
+41,llm_high,"LLM said STL-0010 (high): 'Frm Stl 32 mm' abbreviates 'Steel Frame 32mm', and it is the only candidate with a 32mm size and the same unit (pc)."
+42,fuzzy_auto,score 100 (runner-up 87)
+43,llm_medium,"LLM said SLAT-0013 (medium): Legacy name 'Slat Tk Lg' abbreviates 'Teak Slat Large' (Tk=Teak, Lg=Large) with the same unit, and no other candidate mentions size large, though the legacy code L4538 does not correspond to SLAT-0013 so the match rests on the name alone."
+44,fuzzy_auto,score 100 (runner-up 91)
+45,exact_code,name score 100
+46,exact_code,name score 100
+47,exact_code,name score 100
+48,fuzzy_auto,score 100 (runner-up 87)
+49,llm_high,"LLM said GLD-0003 (high): The legacy name 'Glide 32 mm' matches 'Floor Glide 32mm' apart from the shortened prefix and spacing, the unit (pack) is the same, and no other candidate has the 32mm size."
+50,fuzzy_auto,score 100 (runner-up 76)
+51,llm_high,"LLM said MESH-0005 (high): The code matches exactly and the legacy name 'Mesh Panel Sm' is a clear abbreviation of 'Rope Mesh Panel Small', with the same unit (pc)."
+52,exact_code,name score 100
+53,fuzzy_auto,score 100 (runner-up 94)
+54,llm_high,"LLM said POWDER-0007 (high): 'Pwdr Coat Gry' is a clear abbreviation of 'Powder Coat Grey' with the same unit (kg), and no other candidate has a matching color descriptor."
+55,llm_high,"LLM said AL-0002 (high): ""Alu Tube Nat"" is a clear abbreviation of ""Aluminium Tube Natural"" (Alu = Aluminium, Nat = Natural), with the same unit (m), and no other candidate has a finish that fits ""Nat""."
+56,fuzzy_auto,score 100 (runner-up 94)
+57,fuzzy_auto,score 100 (runner-up 91)
+58,fuzzy_auto,score 100 (runner-up 62)
+59,llm_medium,"LLM said MESH-0003 (medium): ""Lg"" is a standard abbreviation for ""Large"", and MESH-0003 is the only candidate whose name says Large (the others are distinguished by color or mm size), though the legacy name omits ""Rope"" and the codes give no corroboration."
+60,exact_code,name score 100
+61,llm_high,"LLM said CUSH-0004 (high): The code matches exactly, the name 'Outdr Cush 12 mm' is an abbreviation of 'Outdoor Cushion 12mm', and the unit (pc) is the same, while the other candidates differ in thickness or descriptor."
+62,exact_code,name score 100
+63,exact_code,name score 100
+64,exact_code,name score 100
+65,llm_high,"LLM said SCR-0005 (high): ""SS Screw Lg"" expands directly to ""Stainless Screw Large"" (SS=Stainless, Lg=Large) with the same unit, while the other candidates are color variants with no size indicator."
+66,exact_code,name score 100
+67,exact_code,name score 100
+68,llm_high,"LLM said POWDER-0011 (high): 'Pwdr Coat 25 mm' is an abbreviation of 'Powder Coat 25mm' with the same 25mm size and kg unit, and no other candidate has a 25mm size."
+69,llm_high,"LLM said MESH-0009 (high): The code matches exactly, the size (12 mm) is the same, and the unit is the same. The legacy name 'Mesh Panel 12 mm' is just an abbreviated form of 'Rope Mesh Panel 12mm', and no other candidate has a 12mm size."
+70,exact_code,name score 100
+71,exact_code,name score 100
+72,exact_code,name score 100
+73,llm_high,"LLM said AL-0012 (high): The code matches exactly, the name 'Alu Tube 12 mm' is an abbreviation of 'Aluminium Tube 12mm' with the same diameter, and the unit (m) is identical."
+74,exact_code,name score 100
+75,llm_medium,"LLM said POWDER-0010 (medium): Legacy name 'Pwdr Coat Lg' abbreviates 'Powder Coat Large' (Pwdr=Powder, Lg=Large) and the unit (kg) matches, while the other candidates differ by color or size descriptor; the codes don't correspond, so confidence is capped at medium."
+76,exact_code,name score 100
+77,llm_high,"LLM said GLD-0004 (high): The code matches exactly, the unit is the same (pack), and 'Glide Chrcl' is a clear abbreviation of 'Floor Glide Charcoal'."
+78,exact_code,name score 100
+79,exact_code,name score 100
+80,llm_high,"LLM said SCR-0012 (high): The code matches exactly, the unit is the same (box), and 'SS Screw Nat' is a clear abbreviation of 'Stainless Screw Natural' (SS = Stainless, Nat = Natural)."
+81,llm_high,"LLM said SCR-0008 (high): 'SS Screw 20 mm' matches 'Stainless Screw 20mm' (SS = stainless steel) with the same 20 mm size and unit (box), while the other screws differ in size and the steel frame is a different item type and unit."
+82,fuzzy_auto,score 100 (runner-up 85)
+83,llm_high,"LLM said AL-0008 (high): The code matches exactly, the unit is the same (m), and 'Alu Tube Gry' is a clear abbreviation of 'Aluminium Tube Grey'."
+84,exact_code,name score 100
+85,fuzzy_auto,score 100 (runner-up 88)
+86,llm_high,"LLM said SCR-0009 (high): The code matches exactly, 'SS Screw Wht' is a clear abbreviation of 'Stainless Screw White', and the unit (box) is the same."
+87,exact_code,name score 100
+88,fuzzy_auto,score 100 (runner-up 78)
+89,fuzzy_auto,score 100 (runner-up 73)
+90,llm_high,"LLM said CUSH-0001 (high): 'Outdr Cush Wht' abbreviates 'Outdoor Cushion White', and the unit (pc) matches; the other candidates differ in color or size/spec (Sand, Standard, Small, 12mm)."
+91,exact_code,name score 100
+92,llm_high,"LLM said AL-0001 (high): The code matches exactly, the unit is the same (m), and 'Alu Tube Sand' is an abbreviation of 'Aluminium Tube Sand', while the other candidates differ in code and in the color or size descriptor."
+93,fuzzy_auto,score 100 (runner-up 83)
+94,exact_code,name score 100
+95,llm_high,"LLM said POWDER-0006 (high): The code number 0006 matches, 'Pwdr Coat Blk' is a clear abbreviation of 'Powder Coat Black', and the unit (kg) is the same; the other candidates have different numbers and size-based names."
+96,fuzzy_auto,score 100 (runner-up 94)
+97,exact_code,name score 100
+98,fuzzy_auto,score 100 (runner-up 94)
+99,llm_high,"LLM said MESH-0004 (high): The code matches exactly, the unit is the same, and 'Mesh Panel Gry' is a plausible abbreviation of 'Rope Mesh Panel Grey', while the other candidates have different codes and size descriptors rather than a color."
+100,exact_code,name score 100
+101,exact_code,name score 100

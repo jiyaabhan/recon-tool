@@ -1,0 +1,25 @@
+b_row,issue,detail
+1,unmatched,"GLD-0011 / Glide 25 mm: no confident match, may not exist"
+5,unmatched,"L6231 / SS Screw Std: no confident match, may not exist"
+9,cost_conflict,SLAT-0010: A=4.22 vs B=3.38
+10,work_center_conflict,STL-0012: A=Welding vs B=Grinding
+17,unmatched,"MESH-0099 / Mesh Insert Temp: no confident match, may not exist"
+26,work_center_conflict,GLD-0013: A=Grinding vs B=Welding
+41,unmatched,"L5427 / Frm Stl 32 mm: no confident match, may not exist"
+49,unmatched,"L9144 / Glide 32 mm: no confident match, may not exist"
+65,unmatched,"L6453 / SS Screw Lg: no confident match, may not exist"
+66,cost_conflict,CUSH-0009: A=34.79 vs B=43.49
+70,work_center_conflict,CUSH-0002: A=Upholstery vs B=Grinding
+71,cost_conflict,AL-0003: A=4.85 vs B=3.88
+76,cost_conflict,AL-0004: A=6.07 vs B=4.86
+80,unmatched,"SCR-0012 / SS Screw Nat: no confident match, may not exist"
+94,cost_conflict,CUSH-0006: A=39.69 vs B=49.61
+28,duplicate,CUSH-0004 matched by more than one B row
+61,duplicate,CUSH-0004 matched by more than one B row
+,missing_from_b,CUSH-0011 has no row in B
+,missing_from_b,GLD-0003 has no row in B
+,missing_from_b,GLD-0011 has no row in B
+,missing_from_b,SCR-0005 has no row in B
+,missing_from_b,SCR-0007 has no row in B
+,missing_from_b,SCR-0012 has no row in B
+,missing_from_b,STL-0010 has no row in B

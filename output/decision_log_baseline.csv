@@ -1,0 +1,102 @@
+b_row,method,detail
+1,needs_review,best score 59
+2,exact_code,name score 100
+3,fuzzy_auto,score 100 (runner-up 94)
+4,fuzzy_auto,score 100 (runner-up 94)
+5,needs_review,best score 67
+6,exact_code,name score 100
+7,fuzzy_guess,best score 83
+8,exact_code,name score 100
+9,exact_code,name score 100
+10,exact_code,name score 100
+11,fuzzy_guess,best score 72
+12,fuzzy_guess,best score 79
+13,exact_code,name score 100
+14,exact_code,name score 100
+15,fuzzy_guess,best score 89
+16,exact_code,name score 100
+17,needs_review,best score 50
+18,fuzzy_guess,best score 79
+19,exact_code,name score 100
+20,fuzzy_auto,score 100 (runner-up 78)
+21,fuzzy_auto,score 100 (runner-up 76)
+22,fuzzy_guess,best score 74
+23,exact_code,name score 86
+24,exact_code,name score 100
+25,fuzzy_guess,best score 72
+26,exact_code,name score 100
+27,fuzzy_auto,score 100 (runner-up 95)
+28,fuzzy_guess,best score 72
+29,exact_code,name score 100
+30,fuzzy_auto,score 100 (runner-up 85)
+31,exact_code,name score 100
+32,exact_code,name score 100
+33,fuzzy_guess,best score 87
+34,fuzzy_auto,score 100 (runner-up 86)
+35,fuzzy_guess,best score 72
+36,fuzzy_auto,score 100 (runner-up 95)
+37,exact_code,name score 100
+38,fuzzy_auto,score 100 (runner-up 89)
+39,exact_code,name score 100
+40,fuzzy_guess,best score 72
+41,needs_review,best score 69
+42,fuzzy_auto,score 100 (runner-up 87)
+43,fuzzy_guess,best score 80
+44,fuzzy_auto,score 100 (runner-up 91)
+45,exact_code,name score 100
+46,exact_code,name score 100
+47,exact_code,name score 100
+48,fuzzy_auto,score 100 (runner-up 87)
+49,needs_review,best score 59
+50,fuzzy_auto,score 100 (runner-up 76)
+51,fuzzy_guess,best score 76
+52,exact_code,name score 100
+53,fuzzy_auto,score 100 (runner-up 94)
+54,fuzzy_guess,best score 90
+55,fuzzy_guess,best score 71
+56,fuzzy_auto,score 100 (runner-up 94)
+57,fuzzy_auto,score 100 (runner-up 91)
+58,fuzzy_auto,score 100 (runner-up 62)
+59,fuzzy_guess,best score 76
+60,exact_code,name score 100
+61,fuzzy_guess,best score 72
+62,exact_code,name score 100
+63,exact_code,name score 100
+64,exact_code,name score 100
+65,needs_review,best score 69
+66,exact_code,name score 100
+67,exact_code,name score 100
+68,fuzzy_guess,best score 77
+69,fuzzy_guess,best score 72
+70,exact_code,name score 100
+71,exact_code,name score 100
+72,exact_code,name score 100
+73,fuzzy_guess,best score 79
+74,exact_code,name score 100
+75,fuzzy_guess,best score 83
+76,exact_code,name score 100
+77,fuzzy_guess,best score 71
+78,exact_code,name score 100
+79,exact_code,name score 100
+80,needs_review,best score 69
+81,fuzzy_guess,best score 76
+82,fuzzy_auto,score 100 (runner-up 85)
+83,fuzzy_guess,best score 77
+84,exact_code,name score 100
+85,fuzzy_auto,score 100 (runner-up 88)
+86,fuzzy_guess,best score 73
+87,exact_code,name score 100
+88,fuzzy_auto,score 100 (runner-up 78)
+89,fuzzy_auto,score 100 (runner-up 73)
+90,fuzzy_guess,best score 80
+91,exact_code,name score 100
+92,fuzzy_guess,best score 81
+93,fuzzy_auto,score 100 (runner-up 83)
+94,exact_code,name score 100
+95,fuzzy_guess,best score 87
+96,fuzzy_auto,score 100 (runner-up 94)
+97,exact_code,name score 100
+98,fuzzy_auto,score 100 (runner-up 94)
+99,fuzzy_guess,best score 82
+100,exact_code,name score 100
+101,exact_code,name score 100
